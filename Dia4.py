@@ -47,3 +47,11 @@ swa = com2.swapcase()
 print("*" ,cap)
 print("*", ti)
 print("*", swa)
+
+## 9
+cc1=company[7:15]
+print(cc1)
+
+## 10
+print(company.find("coding"))
+
