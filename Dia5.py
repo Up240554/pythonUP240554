@@ -84,4 +84,37 @@ ront_end=['HTML', 'CSS', 'JS', 'React', 'Redux']
 back_end=['Node', 'Express', 'MongoDB']
 total=ront_end+back_end
 print(total)   
-#
+
+#Join the following lists:
+full_stack=total.copy()
+print(full_stack)
+
+#level 2
+##
+ages=[19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+print(ages)
+del ages[0:2]
+del ages[7:8]
+print(ages)
+ages.append(19)
+ages.append(19)
+ages.append(26)
+print(ages)
+
+prom=(sum(ages)/len(ages))
+print(prom)
+ages.sort()
+print(abs(ages[0]-prom))
+print(abs(ages[8]-prom))
+
+from lista_paises import countries
+print(countries[int(len(countries)/2)])
+list1=countries[0:96]
+list2=countries[96:192]
+
+paises=['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+first_three=paises[0:3] 
+rest=paises[3:7]
+print(first_three)
+print(rest)
