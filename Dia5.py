@@ -71,7 +71,7 @@ companies3=it_companies[4:5]
 print(companies3)
 
 #Remove the first IT company from the list
-print(it_companies.remove('Samsung'))
+print(it_companies.remove('Tesla'))
 
 # Remove the middle IT company or companies from the list
 print(it_companies.remove('IBM'))
