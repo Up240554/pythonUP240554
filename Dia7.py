@@ -9,7 +9,7 @@ it_companies.add('Twitter')
 print(it_companies)
 
 #3
-it_companies.update("Tesla","Amazon", "Kodak")
+it_companies.update(["Tesla","Amazon", "Kodak"])
 print(it_companies)
 
 #4
