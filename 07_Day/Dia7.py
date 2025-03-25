@@ -74,3 +74,19 @@ else:
     print("They have the same length.")
 
 #2
+string = "Ejemplo de string."
+lista = ["Supra", "350Z", "Cellica"]
+tuple =("Manzana", "Plátano", "Naranja", "Mango")
+set= {"Ford", "Toyota","Nissan", "Porshe"}
+
+#3
+SENTENCE='I am a teacher and I love to inspire and teach people'.split()
+l1=[]
+count=0
+
+for item in SENTENCE:
+    if item not in l1:
+        count+=1
+        l1.append(item)
+
+print(count)
