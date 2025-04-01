@@ -61,3 +61,25 @@ else:
     print("fruta agregada a la lista.")
     print("Lista actulizada:", frutas)
     
+#Exercises: Level 3
+person={
+    'first_name': 'Abner',
+    'last_name': 'Muro',
+    'age': 22,
+    'country': 'Belice',
+    'is_marred':  False,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Avenida siempre viva',
+        'zipcode' : '20000'
+    }
+    }
+#1
+if 'skills' in person:
+    skills = person['skills']
+    middle_index = len(skills) 
+    print("Middle skill:", skills[middle_index])
+else:
+    print("The person dictionary does not have the 'skills' key.")
+
+#2
