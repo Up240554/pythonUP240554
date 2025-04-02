@@ -54,3 +54,25 @@ for i in range(101):
         print(i)
 
 i=0
+
+# Exercises: Level 2
+
+#1
+total_sum = 0
+for i in range(101):
+    total_sum += i
+print(total_sum)
+
+#2
+sum_evens = 0
+sum_odds = 0
+for i in range(101):
+    if i % 2 == 0:
+        sum_evens += i
+    else:
+        sum_odds += i
+print("Sum of even numbers:", sum_evens)
+print("Sum of odd numbers:", sum_odds)
+
+# Exercises: Level 3
+
