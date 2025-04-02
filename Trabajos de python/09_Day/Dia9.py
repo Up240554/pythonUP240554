@@ -83,7 +83,6 @@ else:
     print("The person dictionary does not have the 'skills' key.")
 
 #2
-# Verificar si la clave 'skills' existe en el diccionario
 if 'skills' in person:
     skills = person['skills']
     if 'Python' in skills:
