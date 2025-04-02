@@ -83,3 +83,33 @@ else:
     print("The person dictionary does not have the 'skills' key.")
 
 #2
+# Verificar si la clave 'skills' existe en el diccionario
+if 'skills' in person:
+    skills = person['skills']
+    if 'Python' in skills:
+        print("The person has the 'Python' skill.")
+    else:
+        print("The person does not have the 'Python' skill.")
+else:
+    print("The person dictionary does not have the 'skills' key.")
+
+#3
+if 'skills' in person:
+    skills = person['skills']
+    if set(skills) == {'JavaScript', 'React'}:
+        print('He is a front end developer')
+    elif set(['Node', 'Python', 'MongoDB']).issubset(skills):
+        print('He is a backend developer')
+    elif set(['React', 'Node', 'MongoDB']).issubset(skills):
+        print('He is a fullstack developer')
+    else:
+        print('unknown title')
+else:
+    print("The person dictionary does not have the 'skills' key.")
+
+#4
+if person['is_marred'] and person['country'] == 'Finland':
+    print(f"{person['first_name']} {person['last_name']} lives in Finland. He is married.")
+else:
+    print(f"{person['first_name']} {person['last_name']} does not meet the criteria.")
+    
