@@ -60,3 +60,39 @@ def print_list(lst):
      for i in lst:
         print(i)
 print_list([1,2,3,4,5])
+
+#9
+def reverse_list(lst):
+    return lst[::-1]
+print (reverse_list([1,2,3,4,5]))
+
+#10
+def capitalize_list(lista):
+    return [i.upper() for i in lista]
+print (capitalize_list(['Potato', 'Tomato', 'Mango', 'Milk']))
+
+#11
+def add_item(food_staff,comida):
+    food_staff=['Potato', 'Tomato', 'Mango', 'Milk']
+    food_staff.append(comida)
+    return food_staff
+
+print(add_item(['Potato', 'Tomato', 'Mango', 'Milk'], 'Eggs'))
+
+#12
+def remove_item(food_staff,comida):
+    food_staff=['Potato', 'Tomato', 'Mango', 'Milk']
+    food_staff.remove(comida)
+    return food_staff
+print (remove_item(['Potato', 'Tomato', 'Mango', 'Milk'], 'Mango'))
+
+#13
+def sum_num(num1):
+    for i in range(num1+1):
+        for j in range(num1):
+            i=i+j
+    return i
+print(sum_num(100))
+
+
+    
