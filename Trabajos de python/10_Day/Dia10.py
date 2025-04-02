@@ -24,12 +24,12 @@ while gato<8:
     gato=gato + 1
 
 #4
-fila=0
+fila=8
 columna=8
 
 for i in range(fila):
     for j in range(columna):
-        print('#', end='')
+        print('#', end=' ')
     print()
 
 #5
@@ -75,4 +75,39 @@ print("Sum of even numbers:", sum_evens)
 print("Sum of odd numbers:", sum_odds)
 
 # Exercises: Level 3
+#1
+from lista_paises import countries
+paisesland=[countries for countries in countries if 'land' in countries]
+print(paisesland)
 
+#2
+fruits = ['banana', 'orange', 'mango', 'lemon']
+conteo=-1
+for i in fruits:
+    print(fruits[conteo])
+    conteo=conteo -1
+
+#3
+from countries_data import countries_1
+
+all_languages = set()
+for country in countries_1:
+    all_languages.update(country['languages'])
+total_languages = len(all_languages)
+print("Total number of languages:", total_languages)
+
+#4
+language_count = {}
+for country in countries_1:
+    for language in country['languages']:
+        language_count[language] = language_count.get(language, 0) + 1
+
+most_spoken_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+print("Ten most spoken languages:")
+for language, count in most_spoken_languages:
+    print(f"{language}: {count}")
+
+most_populated_countries = sorted(countries_1, key=lambda x: x['population'], reverse=True)[:10]
+print("Ten most populated countries:")
+for country in most_populated_countries:
+    print(f"{country['name']}: {country['population']}")
