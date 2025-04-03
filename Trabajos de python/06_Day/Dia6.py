@@ -51,3 +51,5 @@ del food_stuff_tp
 nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
 print('Norway' in nordic_countries)
 print('Denmark' in nordic_countries)
+
+print("revisado")

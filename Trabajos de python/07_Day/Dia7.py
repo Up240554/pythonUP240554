@@ -90,3 +90,5 @@ for item in SENTENCE:
         l1.append(item)
 
 print(count)
+
+print("revisado")
