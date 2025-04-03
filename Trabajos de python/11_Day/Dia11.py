@@ -95,4 +95,39 @@ def sum_num(num1):
 print(sum_num(100))
 
 
-    
+#14
+def sum_of_odds(num1):
+    for i in range(num1+1):
+        for j in range(num1):
+            if i%2==0 and j%2==0:
+                i=i+j
+    return i
+print(sum_of_odds(100))
+
+#15
+def sum_of_even(num):
+    total = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            total += i
+    return total
+
+print(sum_of_even(100))
+
+# Exercises: Level 2
+#1
+def evens_and_odds(n):
+    evens = 0
+    odds = 0
+
+    for i in range(n + 1):  
+        if i % 2 == 0:  
+            evens += 1
+        else:  
+            odds += 1
+
+    return f"The number of evens are {evens}. The number of odds are {odds}."
+print(evens_and_odds(100))
+
+#2
+
