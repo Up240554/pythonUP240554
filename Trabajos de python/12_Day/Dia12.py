@@ -83,4 +83,22 @@ def generate_colors():
         print("Please enter a valid integer for the number of colors.")
 generate_colors()
 
-#4
+#Exercises: Level 3
+#1
+def shuffle_list():
+    lista=['Potato', 'Tomato', 'Mango', 'Milk']
+    random.shuffle(lista)
+    print(lista)
+    return lista
+shuffle_list()
+
+#2
+import random
+def numbers():
+    generated_numbers = []
+    while len(generated_numbers) < 7:
+        num = random.randint(0, 9)
+        if num not in generated_numbers:
+            generated_numbers.append(num)
+    return generated_numbers
+print(numbers())
