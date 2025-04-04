@@ -20,3 +20,17 @@ capital1 = [[country.upper(), country[:3].upper(), capital.upper()]
 print(capital1)
 
 #5
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+capital2 = [[country.upper(), capital.upper()] 
+                       for sublist in countries for country, capital in sublist]
+data=[{'country': country, 'capital': capital} for sublist in countries for country, capital in sublist]
+print(data)
+
+#6
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+concatenated_names = [f"{first} {last}" for sublist in names for first, last in sublist]
+print(concatenated_names)
+
+#7
+slope=(lambda x1, y1, x2, y2: ((x2 - x1) / (y2 - y1) ))(3, 4, 5, 7)
+print(slope)
