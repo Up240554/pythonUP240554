@@ -130,4 +130,57 @@ def evens_and_odds(n):
 print(evens_and_odds(100))
 
 #2
+def factorial(fac):
+    numb=1
+    for i in range(1,fac+1):
+        numb=i*numb
+    return numb
+print (factorial(6))
+
+#3
+def is_empty(lst):
+    if len(lst) == 0:
+        return True
+print (is_empty([]))
+
+#4
+def calc_mean(nums):
+    total_media=0
+    for i in nums:
+        total_media=total_media+i
+        prom=total_media/len(nums)
+    return prom
+print (calc_mean([3,2,4,1,5,5,5,7]))
+
+def calc_mediana(nums):
+    mediana=nums[int(len(nums)/2)]
+    return mediana
+print (calc_mediana([3,2,4,1,5,5,5,7]))
+
+def calc_moda(nums):
+    from collections import Counter
+    calc_mode=Counter(nums)
+    return calc_mode.most_common(1)
+print(calc_moda([3,2,4,1,5,5,5,7]))
+
+def calc_rango(nums):
+    nums.sort()
+    range1=nums[0]
+    range2=nums[int(len(nums)-1)]
+    j=range(range1, range2)
+    return j
+print(calc_rango([3,2,4,1,5,5,5,7]))
+
+def calc_varianza(nums):
+    var = sum(nums) / len(nums)
+    var_res = sum((i - var) ** 2 for i in nums) / len(nums)
+    return var_res
+print(calc_varianza([3,2,4,1,5,5,5,7]))
+
+def calc_std(nums):
+    var = sum(nums) / len(nums)
+    var_res = sum((i - var) ** 2 for i in nums) / len(nums)
+    std=var_res**0.5
+    return std
+print(calc_std([3,2,4,1,5,5,5,7]))
 
