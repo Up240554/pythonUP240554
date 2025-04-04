@@ -184,3 +184,68 @@ def calc_std(nums):
     return std
 print(calc_std([3,2,4,1,5,5,5,7]))
 
+# Exercises: Level 3
+#1
+def is_prime(num):
+    for i in range(2, int(num**0.5)+1):
+        if (num%i)==0:
+            print(num,' no es primo')
+        else:
+            print(num,' es primo')
+    return ''
+print(is_prime(9))
+
+#2
+def unique(lst):
+    return len(set(lst))==len(lst)
+print(unique([3,2,4,1,5,5,5,7]))
+
+#3
+def same(lista):
+    list = iter(lista)
+    tipo = type(next(list))
+    if all((type(x) is tipo) for x in list): 
+        print(True)
+    else:
+        print(False)
+    return ''
+print(same([1,2,3,4,'true']))
+
+#4
+def is_valid_python_variable(var_name: str) -> bool:
+
+    if not var_name.isidentifier():
+        return False
+    
+    return True
+print(is_valid_python_variable('for'))
+
+#5
+from collections import Counter
+from countries_data import countries_1  
+
+def most_spoken_languages(data, top_n=10):
+    language_counter = Counter()
+
+    
+    for country in data:
+        language_counter.update(country["languages"])
+
+    
+    most_spoken = language_counter.most_common(top_n)
+    return most_spoken
+
+
+top_languages = most_spoken_languages(countries_1, top_n=10)
+print("Top 10 most spoken languages:")
+for language, count in top_languages:
+    print(f"{language}: {count}")
+
+from countries_data import countries_1
+def most_populated_countries(data, top_n=10):
+    sorted_countries = sorted(data, key=lambda x: x["population"], reverse=True)
+    return sorted_countries[:top_n]
+top_countries = most_populated_countries(countries_1, top_n=10)
+print("Top 10 most populated countries:")
+for country in top_countries:
+    print(f"{country['name']}: {country['population']}")
