@@ -31,3 +31,56 @@ def rgb():
     b=random.randint(0, 255)
     return r,g,b
 print(rgb())
+
+# Exercises: Level 2
+#1
+def hexa_color():
+   for i in range(6):
+    r=random.randint(0, 255)
+    g=random.randint(0, 255)
+    b=random.randint(0, 255)
+    hex_color = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+    print(hex_color)
+hexa_color()
+
+#2
+def list_of_rgb():
+    try:
+        colors = []
+        num_colors = int(input('Enter the number of colors to generate: '))
+        for i in range(num_colors):
+         r=random.randint(0, 255)
+         g=random.randint(0, 255)
+         b=random.randint(0, 255)
+         colors.append((r,g,b))
+        print(colors)
+    except ValueError:
+        print("Please enter a valid integer for the number of colors.")
+list_of_rgb()
+
+#3
+def generate_colors():
+   try:
+    color=str(input('Which color do you want to generate?')).upper()
+    num=int(input('How many colors do you want to generate?'))
+    colors = []
+    if color=='RGB':
+        for i in range(num):
+            r=random.randint(0, 255)
+            g=random.randint(0, 255)
+            b=random.randint(0, 255)
+            colors.append((r,g,b))
+        print(colors)
+    else:
+        for i in range(num):
+            r=random.randint(0, 255)
+            g=random.randint(0, 255)
+            b=random.randint(0, 255)
+            hex_color = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+            colors.append(hex_color)
+        print(colors)
+   except ValueError:
+        print("Please enter a valid integer for the number of colors.")
+generate_colors()
+
+#4
