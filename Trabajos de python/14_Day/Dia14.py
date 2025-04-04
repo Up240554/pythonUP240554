@@ -190,6 +190,36 @@ last_ten_countries = get_last_ten_countries(countries_2)
 print(last_ten_countries)
 
 # Exercises: Level 3
-#1
 
+from countries_data import countries_1
+#1
+def sort_countries_by_name(countries):
+    return sorted(countries, key=lambda x: x['name'])
+
+sorted_countries = sort_countries_by_name(countries_1)
+print("Countries sorted by name:")
+for country in sorted_countries:
+    print(country['name'])
+
+#2
+def most_spoken_languages(countries, top_n=10):
+    from collections import Counter
+    language_counter = Counter()
+    for country in countries:
+        language_counter.update(country['languages'])
+    return language_counter.most_common(top_n)
+
+most_spoken = most_spoken_languages(countries_1, 10)
+print("\nTen most spoken languages:")
+for language, count in most_spoken:
+    print(f"{language}: {count}")
+
+#3
+def most_populated_countries(countries, top_n=10):
+    return sorted(countries, key=lambda x: x['population'], reverse=True)[:top_n]
+
+most_populated = most_populated_countries(countries_1, 10)
+print("\nTen most populated countries:")
+for country in most_populated:
+    print(f"{country['name']}: {country['population']}")
 
